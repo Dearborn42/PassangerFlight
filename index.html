@@ -10,12 +10,45 @@
 
 <body>
 
-    <div class="row">
+    <div class="rightRow">
         <textarea id="firstName" placeholder="First Name"></textarea>
         <textarea id="lastName" placeholder="Last Name"></textarea>
+        <p>Date of Birth</p><input type="date">
+        <br>
+        <textarea id="fCity" placeholder="Departure City"></textarea>
+        <textarea id="lCity" placeholder="Arrival City"></textarea>
+        <p>Date leaving</p><input type="date">
+        <p>Date returning</p><input type="date">
+        <p>How many bags</p><input type="number">
+        <p>What kind of meal would you like</p>
+        <input type="radio" name="food"><label>Chicken</label>
+        <input type="radio" name="food"><label>Fish</label>
+        <input type="radio" name="food"><label>Vegitarian</label>
+        <p>Order your extras(Only $10 each!)</p>
+        <label>Leg room</label><input type="checkbox" id="" value="true">
+        <label>Window seat</label><input type="checkbox" id="" value="true">
+        <label>Headphones</label><input type="checkbox" id="" value="true">
+        <label>Second serving of meal</label><input type="checkbox" id="" value="true">
+        <button onclick="addToList()">Submit passanger info</button>
     </div>
 
-    <div class="row">
+    <div class="leftRow">
+        <button>Search</button><textarea id="firstName" placeholder="First Name"></textarea>
+        <p>Sort by :</p><input type="number"><button>Print All names</button>
+        <p>Date of Birth</p><input type="date">
+        <br>
+        <textarea id="fCity" placeholder="Departure City"></textarea>
+        <textarea id="lCity" placeholder="Arrival City"></textarea>
+        <p>Date leaving</p><input type="date">
+        <p>Date returning</p><input type="date">
+        <p>Bags</p><input type="number">
+        <div id="row">
+            <p>Trip duration</p><textarea></textarea>
+            <p>Meal</p><textarea></textarea>
+            <p>Age</p><p>//num</p>
+        </div>
+        <p>Extras</p><textarea></textarea>
+        <button onclick="addToList()">Submit passanger info</button>
         <button onclick="addToList()">add</button>
         <button onclick="print()">print</button>
     </div>

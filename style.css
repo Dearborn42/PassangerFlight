@@ -1,6 +1,6 @@
 html {
     background-color: black;
-    color: white;
+    color: black;
 }
 
 span {
@@ -14,4 +14,25 @@ textarea {
     width: 250px;
     resize: none;
     overflow: hidden;
+}
+
+.rightRow{
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin: 0vw;
+    float: left;
+}
+.leftRow{
+    background-color:azure;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    float: right;
+    margin:0vw;
+}
+#row{
+    display: flex;
+    flex-direction: row; 
 }
