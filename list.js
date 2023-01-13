@@ -60,7 +60,17 @@ class Passanger{
 }
 
 function add(){
-   passangers.push(new Passanger(document.getElementById('firstName').value, document.getElementById('lastName').value, document.getElementById('dob').value, document.getElementById('fCity').value, document.getElementById('lCity').value, document.getElementById('dod').value, document.getElementById('doa').value, document.getElementById('numOfBags').value).getTripTime().getAge().getFoodChoice().getExtras().getTotal().getId());
+   passangers.push(
+    new Passanger(
+        document.getElementById('firstName').value, 
+        document.getElementById('lastName').value, 
+        document.getElementById('dob').value, 
+        document.getElementById('fCity').value, 
+        document.getElementById('lCity').value, 
+        document.getElementById('dod').value, 
+        document.getElementById('doa').value, 
+        document.getElementById('numOfBags').value
+        ).getTripTime().getAge().getFoodChoice().getExtras().getTotal().getId());
 
    document.getElementById('firstName').value = "";
    document.getElementById('lastName').value = "";
@@ -71,5 +81,4 @@ function add(){
    document.getElementById('doa').value = ""; 
    document.getElementById('numOfBags').value = "";
    console.log(passangers)
-
 }
