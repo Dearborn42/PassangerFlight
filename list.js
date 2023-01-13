@@ -82,3 +82,13 @@ function add(){
    document.getElementById('numOfBags').value = "";
    console.log(passangers)
 }
+
+
+function print(){
+    let id = document.getElementById('id').value;
+    let passanger = passangers[id];
+    document.getElementById("printDOB").value = passanger.dob;
+    document.getElementById("dCity").value = passanger.fCity;
+    document.getElementById("aCity").value = passanger.lCity;
+    
+}
