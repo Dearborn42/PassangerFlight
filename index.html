@@ -13,23 +13,23 @@
     <div class="rightRow">
         <textarea id="firstName" placeholder="First Name"></textarea>
         <textarea id="lastName" placeholder="Last Name"></textarea>
-        <p>Date of Birth</p><input type="date">
+        <p>Date of Birth</p><input type="date" id="dob">
         <br>
         <textarea id="fCity" placeholder="Departure City"></textarea>
         <textarea id="lCity" placeholder="Arrival City"></textarea>
-        <p>Date leaving</p><input type="date">
-        <p>Date returning</p><input type="date">
-        <p>How many bags</p><input type="number">
+        <p>Date leaving</p><input type="date" id="dod">
+        <p>Date returning</p><input type="date" id="doa">
+        <p>How many bags</p><input type="number" id="numOfBags">
         <p>What kind of meal would you like</p>
-        <input type="radio" name="food"><label>Chicken</label>
-        <input type="radio" name="food"><label>Fish</label>
-        <input type="radio" name="food"><label>Vegitarian</label>
+        <input type="radio" name="food" value="chicken"><label>Chicken</label>
+        <input type="radio" name="food" value="fish"><label>Fish</label>
+        <input type="radio" name="food" value="vegitarian"><label>Vegitarian</label>
         <p>Order your extras(Only $10 each!)</p>
-        <label>Leg room</label><input type="checkbox" id="" value="true">
-        <label>Window seat</label><input type="checkbox" id="" value="true">
-        <label>Headphones</label><input type="checkbox" id="" value="true">
-        <label>Second serving of meal</label><input type="checkbox" id="" value="true">
-        <button onclick="addToList()">Submit passanger info</button>
+        <label>Leg room</label><input type="checkbox" name="extra" id="legRoom" value=10>
+        <label>Window seat</label><input type="checkbox" name="extra" id="windowSeat" value=10>
+        <label>Headphones</label><input type="checkbox" name="extra" id="headphones" value=10>
+        <label>Second serving of meal</label><input type="checkbox" name="extra" id="secondMeal" value=10>
+        <button onclick="add()">Submit passanger info</button>
     </div>
 
     <div class="leftRow">
@@ -48,9 +48,7 @@
             <p>Age</p><p>//num</p>
         </div>
         <p>Extras</p><textarea></textarea>
-        <button onclick="addToList()">Submit passanger info</button>
-        <button onclick="addToList()">add</button>
-        <button onclick="print()">print</button>
+        <button onclick="print()">Print</button>
     </div>
 
     <!-- work in progress -->
