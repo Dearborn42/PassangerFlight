@@ -37,3 +37,10 @@ textarea {
     flex-direction: row; 
     justify-content: space-between;
 }
+input{
+    width: 10vw;
+}
+
+textarea{
+    width: 10vw;
+}

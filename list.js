@@ -83,8 +83,19 @@ function add(){
    console.log(passangers)
 }
 
+let text = document.getElementById("allLastNames");
+let text2 = document.getElementById("allFirstNames");
+let text3 = document.getElementById("allNames");
 
 function print(){
+    
+    for(let i = 0; i < passangers.length; i++){
+        text.innerHTML = "Sorted first names: ";
+        text2.innerHTML = "Sorted last names: ";
+        text3.innerHTML = "Sorted indexes: ";
+    }
+
+
     let id = document.getElementById('id').value;
     let passanger = passangers[id];
     document.getElementById("printDOB").value = passanger.dob;
@@ -125,7 +136,7 @@ function printNames(){
                 document.getElementById('id').value = i;
                 print();
             };
-            document.getElementById("allLastNames").appendChild(button);
+            text.appendChild(button);
     }
 
     for(let i = 0; i<passangers.length; i++){
@@ -136,7 +147,7 @@ function printNames(){
                 document.getElementById('id').value = i;
                 print();
             };
-            document.getElementById("allFirstNames").appendChild(button);
+            text2.appendChild(button);
     }
 
     for(let i = 0; i<passangers.length; i++){
@@ -146,6 +157,6 @@ function printNames(){
                 document.getElementById('id').value = i;
                 print();
             };
-            document.getElementById("allNames").appendChild(button);
+            text3.appendChild(button);
     }
 }

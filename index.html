@@ -13,47 +13,52 @@
     <div class="rightRow">
         <textarea id="firstName" placeholder="First Name"></textarea>
         <textarea id="lastName" placeholder="Last Name"></textarea>
-        <p>Date of Birth</p><input type="date" id="dob">
+        <p>Date of Birth: <input type="date" id="dob"></p>
         <br>
         <textarea id="fCity" placeholder="Departure City"></textarea>
         <textarea id="lCity" placeholder="Arrival City"></textarea>
-        <p>Date leaving</p><input type="date" id="dod">
-        <p>Date returning</p><input type="date" id="doa">
-        <p>How many bags</p><input type="number" id="numOfBags">
+        <p>Date leaving: <input type="date" id="dod"></p>
+        <p>Date returning: <input type="date" id="doa"></p>
+        <p>How many bags: <input type="number" id="numOfBags"></p>
         <p>What kind of meal would you like</p>
         <input type="radio" name="food" value="chicken"><label>Chicken</label>
         <input type="radio" name="food" value="fish"><label>Fish</label>
         <input type="radio" name="food" value="vegitarian"><label>Vegitarian</label>
         <p>Order your extras(Only $10 each!)</p>
-        <label>Leg room</label><input type="checkbox" name="extra" id="legRoom" value=10>
-        <label>Window seat</label><input type="checkbox" name="extra" id="windowSeat" value=10>
-        <label>Headphones</label><input type="checkbox" name="extra" id="headphones" value=10>
-        <label>Second serving of meal</label><input type="checkbox" name="extra" id="secondMeal" value=10>
+        <label>Leg room <input type="checkbox" name="extra" id="legRoom" value=10></label>
+        <label>Window seat <input type="checkbox" name="extra" id="windowSeat" value=10></label>
+        <label>Headphones <input type="checkbox" name="extra" id="headphones" value=10></label>
+        <label>Second serving of meal <input type="checkbox" name="extra" id="secondMeal" value=10></label>
         <button onclick="add()">Submit passanger info</button>
     </div>
 
     <div class="leftRow">
+        <div class="buttons">
         <button onclick="printNames()">Print All names</button>
-        <p>Sort by :</p><input type="number" id="id">
+        <p>Sort by: <input type="number" id="id"></p>
         <button onclick="print()">Search</button>
         <button onclick="change()">Update person</button>
+        </div>
 
         <p>Date of Birth: <input type="text" id="printDOB"></p>
         <br>
+        <div id="row">
         <p>City of departure: <input type="text" id="dCity"></p>
         <p>City of arrival: <input type="text" id="aCity"></p>
-        
         <p>Date leaving: <input type="text" id="printDod"></p>
         <p>Date returning: <input type="text" id="printDoa"></p>
+        </div>
         <p>Bags: <input type="text" id="printNumOfBags"></p>
         <p>Trip duration: <input type="text" id="tripD"></p>
+        <div id="row">
         <p>Meal: <input type="text" id="meal"></p>
         <p>Age: <input type="text" id="age"></p>
         <p>Cost: <input type="text" id="cost"></p>
+        </div>
         <p>Extras: <input type="text" id="ext"></p>
-        <p id="allFirstNames"></p>
-        <p id ="allLastNames"></p>
-        <p id="allNames"></p>
+        <p id="allFirstNames">Sorted first names: </p>
+        <p id ="allLastNames">Sorted last names: </p>
+        <p id="allNames">Sorted by ID: </p>
         <p id="allNames2"></p>
     </div>
 
