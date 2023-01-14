@@ -62,8 +62,8 @@ class Passanger{
 function add(){
    passangers.push(
     new Passanger(
-        document.getElementById('firstName').value, 
-        document.getElementById('lastName').value, 
+        (document.getElementById('firstName').value).toLowerCase(), 
+        (document.getElementById('lastName').value).toLowerCase(), 
         document.getElementById('dob').value, 
         document.getElementById('fCity').value, 
         document.getElementById('lCity').value, 
@@ -90,5 +90,62 @@ function print(){
     document.getElementById("printDOB").value = passanger.dob;
     document.getElementById("dCity").value = passanger.fCity;
     document.getElementById("aCity").value = passanger.lCity;
-    
+    document.getElementById("printDod").value = passanger.dod;
+    document.getElementById("printDoa").value = passanger.doa;
+    document.getElementById("printNumOfBags").value = passanger.numOfBags;
+    document.getElementById("tripD").value = passanger.duration;
+    document.getElementById("meal").value = passanger.typeOfMeal;
+    document.getElementById("age").value = passanger.age;
+    document.getElementById("cost").value = passanger.total;
+    document.getElementById("ext").value = passanger.extras;
+}
+function change(){
+    let id = document.getElementById('id').value;
+    let passanger = passangers[id];
+    passanger.dob = document.getElementById("printDOB").value;
+    passanger.fCity = document.getElementById("dCity").value;
+    passanger.lCity = document.getElementById("aCity").value;
+    passanger.dod = document.getElementById("printDod").value;
+    passanger.doa = document.getElementById("printDoa").value;
+    passanger.numOfBags = document.getElementById("printNumOfBags").value;
+    passanger.duration = document.getElementById("tripD").value;
+    passanger.typeOfMeal = document.getElementById("meal").value;
+    passanger.age = document.getElementById("age").value;
+    passanger.total = document.getElementById("cost").value;
+    passanger.extras = document.getElementById("ext").value;
+}
+
+function printNames(){
+
+    for(let i = 0; i<passangers.length; i++){
+            passangers.sort((a, b) => a.lName.localeCompare(b.lName));
+            let button = document.createElement("button");
+            button.innerText = passangers[i].fName + " " + passangers[i].lName + " " + passangers[i].id;
+            button.onclick = function(){
+                document.getElementById('id').value = i;
+                print();
+            };
+            document.getElementById("allLastNames").appendChild(button);
+    }
+
+    for(let i = 0; i<passangers.length; i++){
+            passangers.sort((a, b) => a.fName.localeCompare(b.fName));
+            let button = document.createElement("button");
+            button.innerText = passangers[i].fName + " " + passangers[i].lName + " " + passangers[i].id;
+            button.onclick = function(){
+                document.getElementById('id').value = i;
+                print();
+            };
+            document.getElementById("allFirstNames").appendChild(button);
+    }
+
+    for(let i = 0; i<passangers.length; i++){
+            let button = document.createElement("button");
+            button.innerText = passangers[i].fName + " " + passangers[i].lName + " " + passangers[i].id;
+            button.onclick = function(){
+                document.getElementById('id').value = i;
+                print();
+            };
+            document.getElementById("allNames").appendChild(button);
+    }
 }

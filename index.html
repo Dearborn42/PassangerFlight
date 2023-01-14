@@ -33,27 +33,28 @@
     </div>
 
     <div class="leftRow">
-        <button>Search</button><textarea id="printFirstName" placeholder="First Name"></textarea>
+        <button onclick="printNames()">Print All names</button>
         <p>Sort by :</p><input type="number" id="id">
-        <button>Print All names</button>
+        <button onclick="print()">Search</button>
+        <button onclick="change()">Update person</button>
 
-        <p>Date of Birth:</p><p id="printDOB"></p>
+        <p>Date of Birth: <input type="text" id="printDOB"></p>
         <br>
-        <div id="row">
-            <p>City of departure:</p><p id="dCity"></p>
-            <p>City of arrival:</p><p id="aCity"></p>
-        </div>
+        <p>City of departure: <input type="text" id="dCity"></p>
+        <p>City of arrival: <input type="text" id="aCity"></p>
         
-        <p>Date leaving:</p><p id="printDod"></p>
-        <p>Date returning:</p><p id="printDoa"></p>
-        <p>Bags:</p><p id="printNumOfBags"></p>
-        <div id="row">
-            <p>Trip duration:</p>   <p id="tripD"></p>
-            <p>Meal:</p>            <p id="meal"></p>
-            <p>Age:</p>             <p id="age"></p>
-        </div>
-        <p>Extras:</p>             <p id="ext"></p>
-        <button onclick="print()">Print</button>
+        <p>Date leaving: <input type="text" id="printDod"></p>
+        <p>Date returning: <input type="text" id="printDoa"></p>
+        <p>Bags: <input type="text" id="printNumOfBags"></p>
+        <p>Trip duration: <input type="text" id="tripD"></p>
+        <p>Meal: <input type="text" id="meal"></p>
+        <p>Age: <input type="text" id="age"></p>
+        <p>Cost: <input type="text" id="cost"></p>
+        <p>Extras: <input type="text" id="ext"></p>
+        <p id="allFirstNames"></p>
+        <p id ="allLastNames"></p>
+        <p id="allNames"></p>
+        <p id="allNames2"></p>
     </div>
 
     <!-- work in progress -->
